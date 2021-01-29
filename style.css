@@ -13,6 +13,8 @@ body{
     background-attachment: scroll;
     background-size: cover;
 }
+#main{
+}
 nav{
     height: 50px;
     width: 100%;
@@ -96,12 +98,19 @@ nav ul li a:hover, a.active{
 .inp-width{
     min-width: 300px;
 }
-.plus-minus-btn{
+.plus-btn{
+    color:blue;
+    font-size: 30px;
+    padding: 3px;
+    margin:10px 5px 0px 25px ;
+    cursor: pointer;
+}
+.minus-btn{
     color: #3352F2;
     font-size: 30px;
-    padding: 2px;
-    margin: 10px 5px 0px 0px;
-    word-spacing: 20px;
+    padding: 3px;
+    margin:10px 5px 0px 15px;
+    cursor: pointer;
 }
 .booking-form .inputs{
     display: grid;
@@ -117,8 +126,38 @@ nav ul li a:hover, a.active{
     color: #fff;
     font-weight: 500;
     background-color:  #E33741;
+    cursor: pointer;
 }
 .amount{
     display: flex;
     justify-content: space-between;
+}
+.congo{
+    text-align: center;
+    color: crimson;
+    display: none;
+    background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+    background-size: cover;
+    height: 937px;  
+}
+.img{
+    /* background-color: thistle; */
+    margin-top: 40px;
+}
+.message{
+    font-size: 50px;
+}
+.againBook{
+    text-align: center;
+    display: block;
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    background-color:  #E33741;
+    cursor: pointer;
+    margin-left: 40%;
+    margin-top: 20px;
 }
