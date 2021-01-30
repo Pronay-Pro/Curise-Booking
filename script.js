@@ -1,9 +1,19 @@
+
 const bookNow = document.getElementById("bookNow");
 bookNow.addEventListener("click", function () {
-    const main = document.getElementById("main");
-    main.style.display = "none"
-    const congo = document.getElementById("congo");
-    congo.style.display = "block";
+
+    const firstClass = document.getElementById("firstClass");
+    const primaryClass = document.getElementById("primaryClass")
+    if (firstClass.value == 0 && primaryClass.value == 0) {
+        alert("Hey Sir!!! Did you miss something? You are not BOOKING any number of Ticket. Plz BOOKING TICKET FIRST......\n\n Happy Journey.... ")
+    }
+    else if ((firstClass.value > 0 || primaryClass.value > 0)) {
+        const main = document.getElementById("main");
+        main.style.display = "none"
+        const congo = document.getElementById("congo");
+        congo.style.display = "block"
+    }
+
 })
 const againBook = document.getElementById("AgainBook");
 againBook.addEventListener("click", function () {
@@ -12,8 +22,6 @@ againBook.addEventListener("click", function () {
     const congo = document.getElementById("congo");
     congo.style.display = "none";
 })
-
-
 const fstClassIn = document.getElementById("increaseFstClass");
 fstClassIn.addEventListener("click", function () {
     fstTicket(true);
@@ -84,61 +92,3 @@ function calculate() {
 
 
 
-
-
-
-
-// const fstClassIn = document.getElementById("increaseFstClass");
-// fstClassIn.addEventListener("click",function(){
-//     const firstClassIn = document.getElementById("firstClass").value;
-//     const fstClassInNumber = parseInt(firstClassIn);
-//     const fstClassInCount =  fstClassInNumber +1;
-//     document.getElementById("firstClass").value =fstClassInCount; 
-//     const fstClassTicketAmount = fstClassInCount *150
-//     document.getElementById("ticketValue").innerHTML ="$"+fstClassTicketAmount;
-//     const fstClassTicketAmountVat = fstClassTicketAmount *0.1
-//     document.getElementById("fstClassVat").innerHTML ="$"+fstClassTicketAmountVat;
-//     const total = fstClassTicketAmount + fstClassTicketAmountVat;
-//     document.getElementById("total").innerHTML ="$"+total;
-// })
-
-// const fstClassDe = document.getElementById("decreaseFstClass");
-// fstClassDe.addEventListener('click',function(){
-//     const firstClassDe = document.getElementById("firstClass").value;
-//     const firstClassDeNumber = parseInt(firstClassDe);
-//      const firstClassDeCount = firstClassDeNumber - 1;
-//     if(firstClassDeCount>=0){
-//         document.getElementById("firstClass").value =firstClassDeCount; 
-//         const fstClassTicketAmount = firstClassDeCount *150
-//         document.getElementById("ticketValue").innerHTML ="$"+fstClassTicketAmount;
-//         const fstClassTicketAmountVat = fstClassTicketAmount *0.1
-//         document.getElementById("fstClassVat").innerHTML ="$"+fstClassTicketAmountVat;
-//         const total = fstClassTicketAmount - fstClassTicketAmountVat;
-//         document.getElementById("total").innerHTML ="$"+total;
-//     } 
-// })
-
-// const pryClassIn = document.getElementById("increasePryClass");
-// pryClassIn.addEventListener('click',function(){
-//     const pryClassIn = document.getElementById("primaryClass").value;
-//     const pryClassInNumber = parseInt(pryClassIn);
-//     const pryClassInCount = pryClassInNumber + 1;
-//     document.getElementById("primaryClass").value = pryClassInCount;
-//     const pryClassTicketAmount = pryClassInCount *100;
-//     document.getElementById("ticketValue").innerHTML = "$"+pryClassTicketAmount;
-//     const pryClassTicketAmountVat = pryClassTicketAmount * 0.1;
-//     document.getElementById("fstClassVat").innerHTML = pryClassTicketAmountVat;
-// })
-// const pryClassDe = document.getElementById("decreasePryClass");
-// pryClassDe.addEventListener('click',function(){
-//     const pryClassDe = document.getElementById("primaryClass").value;
-//     const pryClassDeNumber = parseInt(pryClassDe);
-//     const pryClassDeCount = pryClassDeNumber - 1;
-//    if(pryClassDeCount>=0){
-//     document.getElementById("primaryClass").value = pryClassDeCount;
-//     const pryClassTicketAmount = pryClassDeCount *100;
-//     document.getElementById("ticketValue").innerHTML = "$"+pryClassTicketAmount;
-//     const pryClassTicketAmountVat = pryClassTicketAmount * 0.1;
-//     document.getElementById("fstClassVat").innerHTML = pryClassTicketAmountVat;
-//    }
-// })
